@@ -17,7 +17,7 @@ const Header = () => {
 
           <nav className="hidden md:flex space-x-8">
             <a
-              href="#home"
+              href="/"
               className="text-teal-600 hover:text-teal-700 font-medium"
             >
               Home
@@ -25,7 +25,7 @@ const Header = () => {
             <a href="/about" className="text-gray-600 hover:text-gray-900">
               About
             </a>
-            <a href="#services" className="text-gray-600 hover:text-gray-900">
+            <a href="/services" className="text-gray-600 hover:text-gray-900">
               Services
             </a>
             <a href="#portfolio" className="text-gray-600 hover:text-gray-900">
@@ -45,7 +45,7 @@ const Header = () => {
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-gray-600">
               <Phone size={16} />
-              <span className="text-sm">+91 99999 99999</span>
+              <span className="text-sm">+91 88605 25209</span>
             </div>
             <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-primary/90 h-9 px-4 py-2 bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700 text-white shadow-lg hover:shadow-xl transition-all duration-300">
               Get Quote
