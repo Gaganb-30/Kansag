@@ -7,6 +7,9 @@ import Services from "./pages/Services";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Portfolio from "./pages/Portfolio";
+import Testimonials from "./pages/Testimonials";
+import Contact from "./pages/Contact";
 
 const Layout = ({ children }) => {
   return (
@@ -21,15 +24,12 @@ const Layout = ({ children }) => {
 function App() {
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 700, // keep it shorter than hover
       once: true,
       offset: 100,
-      easing: "ease-in-out",
+      easing: "ease-out-cubic", // smoother, less intrusive
+      disableMutationObserver: true,
     });
-
-    return () => {
-      AOS.refresh();
-    };
   }, []);
 
   return (
@@ -57,6 +57,30 @@ function App() {
             element={
               <Layout>
                 <Services />
+              </Layout>
+            }
+          />
+          <Route
+            path="/portfolio"
+            element={
+              <Layout>
+                <Portfolio />
+              </Layout>
+            }
+          />
+          <Route
+            path="/testimonials"
+            element={
+              <Layout>
+                <Testimonials />
+              </Layout>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <Layout>
+                <Contact />
               </Layout>
             }
           />
