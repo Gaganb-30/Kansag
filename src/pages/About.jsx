@@ -9,7 +9,7 @@ const Leadership = () => {
       experience: "10+ years Experience",
       description:
         "Finance, Operations, and Management. Expert in systems design, resource optimization, and business growth.",
-      color: "from-green-400 to-emerald-500",
+      gradient: "from-blue-950 to-blue-800",
     },
     {
       name: "Kanish Aji",
@@ -17,45 +17,44 @@ const Leadership = () => {
       experience: "12+ years Experience",
       description:
         "Global experience in facility management. Worked with Walmart, Skights, Marshalls, including projects with autonomous cleaning robots.",
-      color: "from-pink-400 to-rose-500",
+      gradient: "from-blue-900 to-blue-700",
     },
   ];
 
   return (
-    <section className="py-20 px-4 bg-linear-to-br from-teal-50 to-cyan-50">
+    <section className="py-16 sm:py-20 px-4 bg-linear-to-br from-blue-50 to-white">
       <div className="max-w-7xl mx-auto">
-        <div data-aos="fade-up" className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        <div data-aos="fade-up" className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-blue-950 mb-4">
             Leadership You Can Trust
           </h2>
-          <p className="text-gray-600">
+          <p className="text-blue-900/80">
             Decades of combined expertise driving excellence
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
           {leaders.map((leader, index) => (
-            <div
-              key={index}
-              data-aos="flip-left"
-              data-aos-delay={index * 200}
-              className="bg-white border border-gray-200 rounded-lg p-8 transition-all duration-300 hover:shadow-xl transform hover:-translate-y-2 group cursor-pointer ease-in-out"
-            >
-              <div className="flex items-start space-x-6">
-                <div
-                  className={`w-24 h-24 rounded-full bg-linear-to-br ${leader.color} shrink-0 transform transition-transform duration-300 group-hover:scale-105 ease-in-out`}
-                ></div>
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-1 group-hover:text-teal-600 transition-colors duration-300">
-                    {leader.name}
-                  </h3>
-                  <p className="text-teal-500 font-medium mb-1">
-                    {leader.role}
-                  </p>
-                  <p className="text-sm text-gray-500 mb-4">
-                    {leader.experience}
-                  </p>
-                  <p className="text-gray-600">{leader.description}</p>
+            <div key={index} data-aos="flip-left" data-aos-delay={index * 200}>
+              <div className="bg-white border border-blue-950/20 rounded-xl p-6 sm:p-8 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-950 transform hover:-translate-y-2 hover:border-2 hover:border-blue-950 group cursor-pointer h-full  flex flex-col">
+                <div className="flex flex-col sm:flex-row items-start space-y-6 sm:space-y-0 sm:space-x-6 grow">
+                  <div
+                    className={`w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-linear-to-br ${leader.gradient} shrink-0 transform transition-transform duration-300 group-hover:scale-105 shadow-md shadow-blue-950`}
+                  ></div>
+                  <div className="flex-1 flex flex-col">
+                    <h3 className="text-xl sm:text-2xl font-bold text-blue-950 mb-1 group-hover:text-blue-800 transition-colors duration-300">
+                      {leader.name}
+                    </h3>
+                    <p className="text-blue-900 font-medium mb-1">
+                      {leader.role}
+                    </p>
+                    <p className="text-sm text-blue-900/60 mb-4">
+                      {leader.experience}
+                    </p>
+                    <p className="text-blue-900/70 grow">
+                      {leader.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -93,34 +92,37 @@ const About = () => {
         "Always evolving, learning, and enhancing our service delivery.",
     },
   ];
+
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="bg-linear-to-br from-teal-50 via-cyan-50 to-blue-50 overflow-hidden py-20">
+      <section className="bg-linear-to-br from-blue-50 via-white to-blue-50 overflow-hidden py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6">
-            About
-            <span className="bg-linear-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">
-              {` `}KANSAG
-            </span>
-          </h1>
-          <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
-            Service You Trust. Excellence You Experience.
-          </p>
+          <div data-aos="fade-up">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-blue-950 mb-6">
+              About
+              <span className="bg-linear-to-r from-blue-950 to-blue-800 bg-clip-text text-transparent">
+                {` `}KANSAG
+              </span>
+            </h1>
+            <p className="text-xl sm:text-2xl text-blue-900/80 max-w-3xl mx-auto">
+              Service You Trust. Excellence You Experience.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Our Story */}
-      <section className="py-20 bg-white">
+      <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+            <div data-aos="fade-right">
+              <h2 className="text-3xl sm:text-4xl font-bold text-blue-950 mb-6">
                 Who We Are
               </h2>
-              <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
+              <div className="space-y-4 text-base sm:text-lg text-blue-900/70 leading-relaxed">
                 <p>
-                  <strong class="text-gray-900">
+                  <strong className="text-blue-950">
                     KANSAG Building Services Pvt. Ltd.
                   </strong>{" "}
                   is a leading facility management company delivering solutions
@@ -135,7 +137,7 @@ const About = () => {
                 </p>
                 <p>
                   We believe in{" "}
-                  <strong className="text-teal-600">
+                  <strong className="text-blue-800 font-semibold">
                     Integrated Facility Management
                   </strong>{" "}
                   — the silent force that ensures comfort, safety,
@@ -144,61 +146,72 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800"
-                alt="Team collaboration"
-                className="rounded-3xl shadow-xl"
-              />
+            <div data-aos="fade-left" data-aos-delay="200">
+              <div className="relative">
+                <img
+                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800"
+                  alt="Team collaboration"
+                  className="rounded-2xl shadow-2xl shadow-blue-950/50 hover:shadow-2xl hover:shadow-blue-950 transition-all duration-300 transform hover:-translate-y-2 w-full h-[400px] object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-linear-to-br from-gray-50 to-teal-50">
+      <section className="py-16 sm:py-20 bg-linear-to-br from-blue-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <Target className="text-teal-600 mb-6 mx-auto w-16" size={56} />
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            <div data-aos="fade-up" className="text-center mb-12">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-linear-to-br from-blue-950 to-blue-800 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg hover:shadow-blue-950">
+                <Target className="text-white" size={32} />
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-blue-950 mb-6">
                 Our Mission
               </h2>
             </div>
 
-            <div className="rounded-xl text-card-foreground bg-white/80 backdrop-blur-sm shadow-xl border-2 border-teal-200">
-              <div className="p-10">
-                <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
-                  <p>
-                    At KANSAG Building Services, our mission goes beyond
-                    maintaining presentable spaces. We create environments that
-                    are{" "}
-                    <strong className="text-gray-900">
-                      safe, efficient, comfortable, and uplifting
-                    </strong>
-                    . Our focus is on long-term facility performance, not just
-                    surface-level cleanliness.
-                  </p>
-                  <p>
-                    We listen, understand, and adapt to each client's needs,
-                    ensuring seamless support and dependable service. We elevate
-                    commercial and residential facilities by integrating skilled
-                    workforce, smart processes, and modern techniques.
-                  </p>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6">
-                    {mission.map((m) => {
-                      const Icon = m.icon;
-                      return (
-                        <div className="text-center">
-                          <div className="w-12 h-12 bg-linear-to-br from-teal-500 to-cyan-600 rounded-xl flex items-center justify-center mx-auto mb-2">
-                            <Icon className="w-6 h-6 text-white" />
+            <div data-aos="fade-up" data-aos-delay="100">
+              <div className="rounded-xl bg-white/80 backdrop-blur-sm shadow-2xl border-2 border-blue-950/20 hover:border-blue-950/40 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-950 transform hover:-translate-y-1">
+                <div className="p-6 sm:p-8 md:p-10">
+                  <div className="space-y-4 text-base sm:text-lg text-blue-900/70 leading-relaxed">
+                    <p>
+                      At KANSAG Building Services, our mission goes beyond
+                      maintaining presentable spaces. We create environments
+                      that are{" "}
+                      <strong className="text-blue-950">
+                        safe, efficient, comfortable, and uplifting
+                      </strong>
+                      . Our focus is on long-term facility performance, not just
+                      surface-level cleanliness.
+                    </p>
+                    <p>
+                      We listen, understand, and adapt to each client's needs,
+                      ensuring seamless support and dependable service. We
+                      elevate commercial and residential facilities by
+                      integrating skilled workforce, smart processes, and modern
+                      techniques.
+                    </p>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 pt-8">
+                      {mission.map((m, index) => {
+                        const Icon = m.icon;
+                        return (
+                          <div
+                            key={index}
+                            data-aos="zoom-in"
+                            data-aos-delay={index * 100}
+                          >
+                            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-linear-to-br from-blue-950 to-blue-800 rounded-lg flex items-center justify-center mx-auto mb-3 shadow-md hover:shadow-blue-950">
+                              <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                            </div>
+                            <p className="text-sm text-center font-semibold text-blue-950">
+                              {m.title}
+                            </p>
                           </div>
-                          <p className="text-sm font-semibold text-gray-900">
-                            {m.title}
-                          </p>
-                        </div>
-                      );
-                    })}
+                        );
+                      })}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -208,31 +221,38 @@ const About = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-20 bg-white">
+      <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <div data-aos="fade-up" className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-blue-950 mb-4">
               Our Core Values
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-lg sm:text-xl text-blue-900/80">
               The principles that guide everything we do
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {mission.map((value) => {
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            {mission.map((value, index) => {
               const Icon = value.icon;
               return (
-                <div className="rounded-xl bg-card text-card-foreground shadow hover:shadow-xl transition-all duration-300 border-2 border-gray-200 hover:border-teal-500 group">
-                  <div className="p-8 text-center">
-                    <div className="w-16 h-16 bg-linear-to-br from-teal-500 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                      <Icon className="text-white" size={48} />
+                <div
+                  key={index}
+                  data-aos="fade-up"
+                  data-aos-delay={index * 100}
+                  className="h-full"
+                >
+                  <div className="bg-white border border-blue-950/20 rounded-xl p-6 hover:shadow-2xl hover:shadow-blue-950 transition-all duration-300 hover:border-2 hover:border-blue-950 transform hover:-translate-y-2 group h-full flex flex-col">
+                    <div className="p-6 text-center flex flex-col h-full">
+                      <div className="w-16 h-16 bg-linear-to-br from-blue-950 to-blue-800 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-md shadow-blue-950 shrink-0">
+                        <Icon className="text-white" size={30} />
+                      </div>
+                      <h3 className="text-xl font-semibold text-blue-950 mb-3 shrink-0">
+                        {value.title}
+                      </h3>
+                      <p className="text-blue-900/70 leading-relaxed grow">
+                        {value.description}
+                      </p>
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                      {value.title}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      {value.description}
-                    </p>
                   </div>
                 </div>
               );
@@ -245,17 +265,17 @@ const About = () => {
       <Leadership />
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-white">
+      <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <div data-aos="fade-up" className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-blue-950 mb-4">
               Why Choose KANSAG?
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-lg sm:text-xl text-blue-900/80">
               The difference that sets us apart
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {[
               {
                 title: "Proven Track Record",
@@ -287,31 +307,32 @@ const About = () => {
                 description:
                   "Tailored solutions designed for your specific facility needs",
               },
-            ].map((item) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={item.title}
-                  className="rounded-xl bg-card text-card-foreground shadow hover:shadow-xl transition-all duration-300 border-2 border-gray-200 hover:border-teal-500"
-                >
-                  <div className="p-8">
-                    <div className="flex items-start space-x-4">
-                      <div className="shrink-0">
-                        <CheckCircle className="text-teal-600" size={32} />
+            ].map((item, index) => (
+              <div
+                key={item.title}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+                className="h-full"
+              >
+                <div className="bg-white border border-blue-950/20 rounded-xl p-6 hover:shadow-2xl hover:shadow-blue-950 transition-all duration-300 hover:border-2 hover:border-blue-950 transform hover:-translate-y-2 h-full flex flex-col">
+                  <div className="flex items-start space-x-4 grow">
+                    <div className="shrink-0">
+                      <div className="w-10 h-10 bg-linear-to-br from-blue-950 to-blue-800 rounded-lg flex items-center justify-center shadow-sm shadow-blue-950">
+                        <CheckCircle className="text-white" size={20} />
                       </div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                          {item.title}
-                        </h3>
-                        <p className="text-gray-600 leading-relaxed">
-                          {item.description}
-                        </p>
-                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold text-blue-950 mb-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-blue-900/70 text-sm sm:text-base leading-relaxed">
+                        {item.description}
+                      </p>
                     </div>
                   </div>
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
         </div>
       </section>
